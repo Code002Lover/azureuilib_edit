@@ -89,8 +89,10 @@ UIListLayout.Padding = UDim.new(0, 10)
 UIPadding.Parent = background
 UIPadding.PaddingLeft = UDim.new(0, 10)
 UIPadding.PaddingTop = UDim.new(0, 10)
-
-function library:CreateWindow(text, desc, mode)
+function library:CreateTab(...)
+	return library
+end
+function library:CreateTab(text, desc, mode)
     text = text or ""
     desc = desc or ""
     mode = mode or true
