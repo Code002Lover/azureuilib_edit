@@ -90,7 +90,7 @@ UIPadding.Parent = background
 UIPadding.PaddingLeft = UDim.new(0, 10)
 UIPadding.PaddingTop = UDim.new(0, 10)
 
-function library:CreateTab(text, desc, mode)
+function library:CreateWindow(text, desc, mode)
     text = text or ""
     desc = desc or ""
     mode = mode or false
