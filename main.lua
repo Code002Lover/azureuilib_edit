@@ -92,7 +92,7 @@ UIPadding.PaddingTop = UDim.new(0, 10)
 function library:CreateWindow(...)
 	return library
 end
-function library:CreateTab(text, desc, mode)
+function library:CreateFolder(text, desc, mode)
     text = text or ""
     desc = desc or ""
     mode = mode or true
