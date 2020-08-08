@@ -93,7 +93,7 @@ UIPadding.PaddingTop = UDim.new(0, 10)
 function library:CreateWindow(text, desc, mode)
     text = text or ""
     desc = desc or ""
-    mode = mode or false
+    mode = mode or true
 	
     if mode then
         theme = dark_theme
