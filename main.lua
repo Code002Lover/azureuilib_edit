@@ -669,7 +669,7 @@ function library:CreateFolder(text, desc, mode)
 
 		return ssss;]]
     end
-    function s:CreateButton(text, callback)
+    function s:Button(text, callback)
 		text = text or ""
         callback = callback or function()
             end
@@ -698,7 +698,7 @@ function library:CreateFolder(text, desc, mode)
         resize(30)
     end
 
-	function s:CreateTextBox(string, callback)
+	function s:Box(string,what, callback)
 		resize(30)
 		string = string or ""
 		callback = callback or function() end
@@ -723,8 +723,10 @@ function library:CreateFolder(text, desc, mode)
 		TextBox.FocusLost:Connect(function(enterpressed)
 			if enterpressed then
 				TextboxUnderline:TweenSize(UDim2.new(0,0,0,2), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 0.1)
+				if(what == "number") then TextBox.Text = callback(tonumber(TextBox.Text)) else
 				callback(TextBox.Text)
 				TextBox.Text = ""
+				end
 			else
 				TextboxUnderline:TweenSize(UDim2.new(0,0,0,2), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 0.1)
 			end
