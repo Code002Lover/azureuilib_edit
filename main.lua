@@ -71,7 +71,7 @@ local UIListLayout = Instance.new("UIListLayout")
 local UIPadding = Instance.new("UIPadding")
 
 local TweenService = game:GetService("TweenService")
-gui = uiui
+gui = background
 local dragging
 local dragInput
 local dragStart
