@@ -467,7 +467,7 @@ function library:CreateFolder(text, desc, mode)
 
 		return ss
     end
-    function s:CreateDropDown(text, list, callback)
+    function s:Dropdown(text, list, callback)
 		callback = callback or function() end
         text = text or ""
 		list = list or {}
