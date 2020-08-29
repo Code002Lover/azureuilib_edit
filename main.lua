@@ -273,6 +273,7 @@ function library:CreateFolder(text, desc, mode)
     local s = {}
 
     function s:Toggle(text, callback)
+	wait()
         text = text or ""
         callback = callback or function()
             end
@@ -367,6 +368,7 @@ function library:CreateFolder(text, desc, mode)
 		return aa;
     end
     function s:CreateSlider(text, minvalue, maxvalue, callback)
+	wait()
         text = text or ""
         callback = callback or function()
             end
@@ -468,7 +470,8 @@ function library:CreateFolder(text, desc, mode)
 		return ss
     end
     function s:Dropdown(text, list, bool, callback)
-		callback = callback or function() end
+	wait()
+	callback = callback or function() end
         text = text or ""
 		list = list or {}
         resize(30)
@@ -525,6 +528,7 @@ function library:CreateFolder(text, desc, mode)
         UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 
         for i, v in next, list do
+		wait()
             local Option1 = Instance.new("TextButton")
             Option1.Name = "Option1"
             Option1.Parent = Dropdown
@@ -670,7 +674,8 @@ function library:CreateFolder(text, desc, mode)
 		return ssss;]]
     end
     function s:Button(text, callback)
-		text = text or ""
+	wait()
+	text = text or ""
         callback = callback or function()
             end
         local Button = Instance.new("TextButton")
@@ -699,6 +704,7 @@ function library:CreateFolder(text, desc, mode)
     end
 
 	function s:Box(string,what, callback)
+		wait()
 		resize(30)
 		string = string or ""
 		callback = callback or function() end
